@@ -5,17 +5,24 @@ using namespace std;
 int main(void){
 
     string a;
+    char c;
     int i;
 
     while(1){
+        a = "";
         i = 0;
-        cin >> a;
-        char b[a.length()];
+        while(c = getchar(), c != '\n'){
+            a += c;
+            i++;
+        }
+        
+        char b[i];
 
         if(a[0] != '.'){
             a = "/bin/" + a;
         }
 
+        i = 0;
         while(a[i] != 0){
             b[i] = a[i];
             i++;
